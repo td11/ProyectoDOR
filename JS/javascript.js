@@ -107,6 +107,8 @@ function cerrarModal() {
     $('#horarios').show();
     $('#precios').show();
     $('#btnIrButacas').show();
+    $('#horarios select').children().remove();
+    $('#precios select').children().remove();
 }
 
 /* Vaciar ventana modal */
