@@ -7,8 +7,7 @@ var btnReservarYa = $('#btnReservarYa');
 
 /* Inicio */
 $(function () {
-
-    cargaReservas();
+    
     $("#contenedorButacas").hide();
     $('#formularioPago').hide();
     
@@ -37,6 +36,8 @@ $(function () {
     btnReservarYa.on('click', function (event) {
         mostrarDetallesDePago();
     });
+    
+    cargaReservas();
 
 
 });
