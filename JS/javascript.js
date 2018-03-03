@@ -8,7 +8,6 @@ var btnReservarYa = $('#btnReservarYa');
 /* Inicio */
 $(function () {
 
-    cargaReservas();
     $("#contenedorButacas").hide();
     $('#formularioPago').hide();
     

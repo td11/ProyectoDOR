@@ -8,30 +8,6 @@ var butacasSeleccionadas = 0;
 
 
 /**
- * Carga los datos del fichero JSON externo para modificar el estado de los asientos.
- */
-function cargaReservas() {
-
-    var cantidadAsientos, almacenamiento = (localStorage.length == 0);
-    (almacenamiento ? cantidadAsientos = (COLUMNAS * FILAS) : cantidadAsientos = localStorage.length);
-
-    for (let i = 1; i <= cantidadButacas; i++) {
-        if (!almacenamiento) {
-            let obj = JSON.parse(localStorage.getItem('objeto' + i));
-            listadoButacas.push({
-                'iden': obj.iden,
-                'clase': obj.clase
-            });
-        } else {
-            listadoButacas.push({
-                'iden': 'butaca' + i,
-                'clase': 'disponible'
-            });
-        }
-    }
-}
-
-/**
  * Cargamos las butacas
  */
 function cargaEscenario() {
@@ -101,7 +77,7 @@ function cargaEventos() {
     }, false);
     
 
-    for (let i = 1; i <= listadoButacas.length; i++) {
+    for (let i = 1; i <= cantidadButacas; i++) {
         document.getElementById('butaca' + i).addEventListener('click', function () {
             let clase = this.getAttribute('class');
 
