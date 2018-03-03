@@ -10,7 +10,7 @@ var butacasSeleccionadas = 0;
 /**
  * Carga los datos del fichero JSON externo para modificar el estado de los asientos.
  */
-/* function cargaReservas() {
+ function cargaReservas() {
 
     var cantidadAsientos, almacenamiento = (localStorage.length == 0);
     (almacenamiento ? cantidadAsientos = (COLUMNAS * FILAS) : cantidadAsientos = localStorage.length);
@@ -29,7 +29,7 @@ var butacasSeleccionadas = 0;
             });
         }
     }
-} */
+} 
 
 /**
  * Cargamos las butacas
