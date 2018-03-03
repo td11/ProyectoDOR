@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>Cartelera</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="CSS/formularioPago.css">
+</head>
+
+<body>
+
+    <header>
+        <a id="cabecerolink" class="active w3-left" href="#home">Inicio</a>
+        <h2 class="w3-center">Cine los chachis<object data="img/logo.svg" type="image/svg+xml"></object></h2>
+    </header>
+
+
+    <div class="w3-content w3-display-container">
+        <img id="0" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/blade-runner-2049.jpg" aria-labelledby="blade-label">
+        <p id="blade-label" class="label">Película blade runner 2049, haz clic para abrir una ventana con mas información y poder votar </p>
+
+
+        <img id="1" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/john.jpg" aria-labelledby="john-label">
+        <p id="john-label" class="label">Película John Wick 2, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="2" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/jumanji.jpg" aria-labelledby="jumanji-label">
+        <p id="jumanji-label" class="label">Película Jumanji, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="3" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/justiceleague.jpg" aria-labelledby="justice-label">
+        <p id="justice-label" class="label">Película La Liga de la Justicia, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="4" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/kingarthur.jpg" aria-labelledby="arthur-label">
+        <p id="arhur-label" class="label">Película El Rey Arturo, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="5" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/logan.jpg" aria-labelledby="logan-label">
+        <p id="logan-label" class="label">Película Logan, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="6" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/mazinger.jpg" aria-labelledby="mazinger-label">
+        <p id="mazinger-label" class="label">Película Mazinger Z, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="7" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/starwars.jpg" aria-labelledby="star-label">
+        <p id="star-label" class="label">Película Star Wars Los Ultimos Jedi, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="8" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/thor.jpg" aria-labelledby="thor-label">
+        <p id="thor-label" class="label">Película Thor Ragnarok, haz clic para abrir una ventana con mas información y poder votar </p>
+
+        <img id="9" tabindex="0" class="mySlides" onclick="ventanaModal(this)" src="img/valerian.jpg" aria-labelledby="valerian-label">
+        <p id="valerian-label" class="label">Película Valerian, haz clic para abrir una ventana con mas información y poder votar </p>
+
+
+        <button data-message="Boton para ir pasar las peliculas a la izquierda" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button data-message="Boton para ir pasar las peliculas a la derecha" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+
+    <!-- The Modal -->
+    <div alt="Ventana modal que contiene formulario para entrar en un sorteo, para votar la película e información de esta" id="modalpeliculas" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span tabindex="0" aria-labelledby="close-label" class="close" onclick="cerrarModal()">&times;</span>
+                <p id="close-label" class="label">Boton para cerrar la ventana modal</p>
+
+                <h2 id="tituloPelicula"><span>Titulo</span></h2>
+            </div>
+            <div id="contenido" class="modal-body">
+                <div id="sinopsis"></div>
+                <div id="horarios">
+                    <select></select>
+                </div>
+                <div id="precios">
+                    <select></select>
+                </div>
+                <button id="btnIrButacas">Elegir</button>
+                <div id="contenedorButacas">
+                    <h3>Selecciona tu asiento</h3>
+                    <div id="informacion">
+                        <div id="leyenda">
+                            <h3>Leyenda</h3>
+                            <label><span class="reservado"> </span> Reservado</label>
+                            <label><span class="disponible"></span> Disponible</label>
+                            <label><span class="seleccionado"></span> Seleccionado</label>
+                        </div>
+                        <div id="informacionAsientos">
+                            <div id="botonera">
+                                <button id="guardar" class="boton">Reservar</button>
+                                <button id="limpiar" class="boton">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Salida</h4>
+                    <svg data-brackets-id="1284" id="butaca" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="100%" height="600px" version="1.1" inkscape:version="0.92.2 (5c3e80d, 2017-08-06)" sodipodi:docname="butaca.svg">
+                           <symbol data-brackets-id="1285" inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1">
+                            <rect data-brackets-id="1286" transform="scale(-1)" ry="29.921604" y="-101.17023" x="-120.94938" height="75.899292" width="62.953461" id="rect10" style="stroke:black;stroke-width:1;stroke-opacity:1"></rect>
+                              <rect data-brackets-id="1287" rx="3.311594" ry="9.3968992" y="90.394531" x="67.340042" height="18.793798" width="46.125782" id="rect30" style="stroke:black;stroke-width:1;stroke-opacity:1"></rect>
+                              <rect data-brackets-id="1288" rx="14.699824" ry="8.2853565" y="63.940964" x="47.573975" height="57.730217" width="29.399649" id="rect51" style="stroke:black;stroke-width:1;stroke-opacity:1"></rect>
+                              <rect data-brackets-id="1289" ry="9.8889742" y="64.475494" x="105.30418" height="57.730217" width="29.399649" id="rect51-0" style="stroke:black;stroke-width:1;stroke-opacity:1"></rect>
+                            </symbol>
+                            <use data-brackets-id="1290" id="butaca1" title="1-1" class="disponible" y="0" x="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1291" id="butaca2" title="1-2" class="disponible" y="0" x="190" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1292" id="butaca3" title="1-3" class="disponible" y="0" x="285" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1293" id="butaca4" title="1-4" class="disponible" y="0" x="380" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1294" id="butaca5" title="2-1" class="disponible" y="100" x="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1296" id="butaca6" title="2-3" class="disponible" y="100" x="190" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1297" id="butaca7" title="2-4" class="disponible" y="100" x="285" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+                            <use data-brackets-id="1301" id="butaca8" title="3-4" class="disponible" y="100" x="380" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#layer1"></use>
+      
+                    </svg>
+                    <h4>Pantalla</h4>      
+                </div>
+                <div id="formularioPago">
+                    <div class="container">
+                        <div class="card"></div>
+                        <div class="card">
+                            <h1 class="title">Pago</h1>
+                            <form>
+                                <div class="input-container"><input type="#{type}" id="#{label}" required="required" /><label for="#{label}">Correo electrónico</label>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="input-container"><input type="#{type}" id="#{label}" required="required" /><label for="#{label}">Titular de la tarjeta</label>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="input-container"><input type="#{type}" id="#{label}" required="required" /><label for="#{label}">Numero de la tarjeta</label>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="button-container">
+                                    <button type="button" id="btnReservarYa"><span>Reservar</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="confirmacionPago"></div>
+            </div>
+            <div class="modal-footer">
+                <h3>Por Teodoro Sergio Reverón Afonso 2DAWA</h3>
+            </div>
+
+        </div>
+    </div>
+    <!-- fin modal -->
+
+    <!-- Pie -->
+    <footer><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="JS/javascript.js"></script>
+    <script src="JS/butacas.js"></script>
+
+</body>
+
+</html>
